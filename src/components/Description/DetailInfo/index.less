@@ -1,0 +1,65 @@
+.yp-detailInfo {
+  width: 100%;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  .yp-rowItem {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .yp-colItem {
+    display: flex;
+    padding: 8px 0;
+    flex: 1;
+    align-items: center;
+
+    .text {
+      width: 45%;
+      text-align: right;
+      color: #969696;
+      white-space: normal;
+    }
+    .textVal {
+      width: 55%;
+      text-align: left;
+      color: #474245;
+    }
+    .strong {
+      color: #f50;
+    }
+  }
+}
+
+// 响应式的布局
+.yp-response {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+
+  .yp-response-item {
+    flex-grow: 1;
+    min-width: 25%;
+    max-width: 100%;
+    margin: 15px;
+    text-align: center;
+    display: flex;
+  }
+
+  .text {
+    text-align: right;
+    color: #969696;
+    display: inline-block;
+    word-break: keep-all;
+  }
+  .textVal {
+    text-align: left;
+    color: #474245;
+    display: inline-block;
+  }
+  .strong {
+    color: #f50;
+  }
+}

@@ -1,0 +1,60 @@
+{
+    "name": "my-lib",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "dumi dev",
+        "docs:build": "dumi build",
+        "lib:build": "father-build",
+        "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+        "test": "umi-test -w",
+        "test:coverage": "umi-test --coverage"
+    },
+    "files": [
+        "dist"
+    ],
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "typings": "dist/index.d.ts",
+    "gitHooks": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,jsx,less,md,json}": [
+            "prettier --write"
+        ],
+        "*.ts?(x)": [
+            "prettier --parser=typescript --write"
+        ]
+    },
+    "publishConfig": {
+        "registry": "https://your-publish-registry"
+    },
+    "dependencies": {
+        "@ant-design/icons": "^4.1.0",
+        "@umijs/preset-react": "1.x",
+        "@umijs/test": "^3.0.5",
+        "antd": "^4.1.5",
+        "axios": "^0.19.2",
+        "classnames": "^2.2.6",
+        "dayjs": "^1.8.25",
+        "dumi": "1.0.26",
+        "father-build": "^1.17.2",
+        "js-cookie": "^2.2.1",
+        "lint-staged": "^10.0.7",
+        "lodash": "^4.17.15",
+        "prettier": "^1.19.1",
+        "react": "^16.13.1",
+        "yorkie": "^2.0.0"
+    },
+    "devDependencies": {
+        "@types/classnames": "^2.2.10",
+        "@types/enzyme": "^3.10.5",
+        "@types/enzyme-adapter-react-16": "^1.0.6",
+        "@types/jest": "^25.2.1",
+        "@types/js-cookie": "^2.2.6",
+        "@types/react-test-renderer": "^16.9.2",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.2",
+        "react-test-renderer": "^16.13.1"
+    }
+}

@@ -1,0 +1,4 @@
+include:
+  - project: "arch-foundation/cicd"
+    ref: master
+    file: "/templates/Frontend.gitlab-ci.yml"
